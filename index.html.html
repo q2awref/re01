@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈平及不贪财，也不好色，好人的讣告</title>
+    
+    <link rel="icon" href="https://bkimg.cdn.bcebos.com/pic/359b033b5bb5c9ea15ce6765386ba1003af33b8715a0?x-bce-process=image/format,f_auto/watermark,image_d2F0ZXIvYmFpa2UyNzI,g_7,xp_5,yp_5,P_20/resize,m_lfit,limit_1,h_1080">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .content{
+            width: 280px;
+            height: 300px;
+            background-image: url(https://s1.wzznft.com/i/2024/02/24/s7us6n.jpeg
+);
+            background-size: cover;
+            position: relative;
+            left: 10px;
+        }
+        .jt{
+            padding-top: 10px;
+            text-align: center;
+            color: aliceblue;
+        }
+        .d{
+            text-align: center;
+            font-size: 30px;
+             color:aliceblue;
+             padding-bottom: 40px;
+        }
+        .s{
+            font-size: 30px;
+            text-align: center;
+        }
+        .linkin{
+            padding-top: 40px;
+            text-align: center;
+            font-size: 20px;
+            color:pink;
+        }
+        .lianjie{
+            position:relative;
+            right:300px;
+            top: 20px;
+            text-decoration: none;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+        a{
+            text-decoration: none;
+        }
+        li{
+            list-style: none;
+        }
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            width: 500px;
+            height: 20px;
+            position: relative;
+            top: 20px;
+        }
+        .nav>ul{
+            display: flex;
+            justify-content: space-between;
+        }
+        .nav>ul>li{
+            width: 100px;
+            height: 20px;
+            text-align: center;
+        }
+        .tu{
+            position: relative;
+            top: 30px;
+            width: 500px;
+            height:300px;
+        }
+        img{
+            width: 500px;
+            height: 300px;
+        }
+        .item{
+            display: none;
+        }
+        .active{
+            color: red;
+        }
+        .actives{
+            display: block;
+        }
+        .ming{
+            position: relative;
+            top:30px;
+            width: 500px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="jt">今天是</div>
+        <div class="d">省级示范高中团风中学陈平已逝</div>
+        <div class="s">
+            <span id="tian" style="color: red;">天</span>
+            <span id="shi" style="color:red;">时</span>
+            <i>:</i>
+            <span id="fen" style="color:red;">分</span>
+            <i>:</i>
+            <span id="miao" style="color:red;">秒</span>
+        </div>
+        <div class="linkin">于2024-1-1零时0分收礼而亡</div>
+    </div>
+    <audio controls loop autoplay>  
+        <source  src="http://m701.music.126.net/20240203122644/2b330d9cb5a42cef91d4e21b72f26847/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/19716855182/8bd5/bd8a/8238/c92cfaac6169c8b3446b37c92643f62c.mp3">  
+        Your browser does not support the audio element.  
+    </audio>
+    <a href="https://tieba.baidu.com/p/8827573004" class="lianjie">友情链接</a>
+    <div class="nav">
+        <h3>美图集锦</h3>
+        <ul>
+            <li><a href="#" class="active">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+        </ul>
+    </div>
+    <div class="tu">
+        <div class="item actives"><img src="https://img1.baidu.com/it/u=1015135238,2221486473&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=753"></div>
+        <div class="item"><img src="https://img2.baidu.com/it/u=612095853,3115149491&fm=253&fmt=auto&app=138&f=JPEG?w=660&h=372"></div>
+        <div class="item"><img src="https://img2.baidu.com/it/u=2708740928,4262040277&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"></div>
+    </div>
+    <div class="ming"></div>
+    <script>
+        const arr=new Array("陈某及不贪财，也不好色。我问心无愧","张璨你来回答下","个猫喵的")
+        let num =+prompt("陈平是好人吗？，是输入1，不是输入2")
+        if(num==1){
+            alert("欢迎你可以坐第一排")
+        }else if(num==2){
+            alert("你也不怕陈平半夜搞你")
+        }else{
+            alert("嘿嘿")
+        }
+        const jt=document.querySelector('.jt')
+        function mydate(){
+            const date=new Date()
+            return`现在是${date.getFullYear()}年${date.getMonth()+1}月${date.getDate()}日${date.getHours()}时${date.getMinutes()}分${date.getSeconds()}秒`
+        }
+        jt.innerHTML=mydate()
+        setInterval(function(){
+            jt.innerHTML=mydate()
+        },1000)
+        //封装函数
+       function get(){
+        const now=+new Date()
+        const last= +new Date('2024-1-1 00:00:00')
+        const count=parseInt((now-last)/1000)
+        console.log(count)
+        let t=parseInt(count/60/60/24)
+        //获取小数部分
+        let s=parseInt([(count/60/60/24)-Math.floor(count/60/60/24)]*24)
+        let s1=[(count/60/60/24)-Math.floor(count/60/60/24)]*24
+        let f=parseInt([s1-Math.floor(s1)]*60)
+        let f1=[s1-Math.floor(s1)]*60
+        let m=parseInt([f1-Math.floor(f1)]*60)
+        const hour=document.querySelector('#shi')
+        const day=document.querySelector('#tian')
+        const minutes=document.querySelector('#fen')
+        const seconds=document.querySelector('#miao')
+        day.innerHTML=`${t}天`
+        hour.innerHTML=`${s}个小时`
+        minutes.innerHTML=`${f}分`
+        seconds.innerHTML=`${m}秒`
+       }
+       //先调用一次
+       get()
+       //定时器调用函数不需要小括号
+       setInterval(get,1000)
+       const as=document.querySelectorAll('.nav a')
+       for(let i=0;i<as.length;i++){
+        as[i].addEventListener('mouseenter',function(){
+                document.querySelector('.active').classList.remove('active')
+                this.classList.add('active')
+                document.querySelector('.actives').classList.remove('actives')
+                document.querySelector(`.item:nth-child(${i+1})`).classList.add('actives')
+                document.querySelector('.ming').innerHTML=arr[i]
+            })
+       }
+       
+    </script>
+</body>
+</html>
